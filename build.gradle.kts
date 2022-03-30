@@ -30,6 +30,9 @@ dependencies {
 
     implementation("io.micronaut.aws:micronaut-function-aws-custom-runtime")
 
+    implementation("io.micronaut.aws:micronaut-aws-sdk-v2")
+    implementation("software.amazon.awssdk:s3")
+
     runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin")
 
 }

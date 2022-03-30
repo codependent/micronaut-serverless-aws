@@ -1,14 +1,12 @@
 package com.codependent.aws
 
 import com.amazonaws.services.lambda.runtime.RequestHandler
-import com.amazonaws.services.lambda.runtime.events.APIGatewayProxyRequestEvent
-import com.amazonaws.services.lambda.runtime.events.APIGatewayProxyResponseEvent
 import io.micronaut.function.aws.runtime.AbstractMicronautLambdaRuntime
 import java.net.MalformedURLException
 
-class FunctionLambdaRuntime : AbstractMicronautLambdaRuntime<APIGatewayProxyRequestEvent, APIGatewayProxyResponseEvent, Map<String, String>, Map<String, String>>() {
+class FunctionLambdaRuntime : AbstractMicronautLambdaRuntime<Map<String, Any>, Void, Map<String, Any>, Unit>() {
 
-    override fun createRequestHandler(vararg args: String): RequestHandler<Map<String, String>, Map<String, String>> {
+    override fun createRequestHandler(vararg args: String): RequestHandler<Map<String, Any>, Unit> {
         return FunctionHandler()
     }
 

@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: com.codependent.aws
+testFramework: kotest
+sourceLanguage: kotlin
+buildTool: gradle_kotlin
+features: [annotation-api, app-name, aws-lambda, aws-lambda-custom-runtime, gradle, http-client, jackson-databind, kotest, kotlin, kotlin-build, logback, micronaut-build, readme, shade, yaml]

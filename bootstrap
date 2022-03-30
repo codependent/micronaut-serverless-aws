@@ -1,0 +1,3 @@
+#!/bin/sh
+set -euo pipefail
+java -XX:TieredStopAtLevel=1 -noverify -cp micronaut-serverless-aws.jar io.micronaut.function.aws.runtime.MicronautLambdaRuntime

@@ -33,4 +33,12 @@ class BookRequestHandlerTest : StringSpec({
         bookSaved.isbn.shouldNotBeNull()
         handler.applicationContext.close()
     }
+
+    "test function handler" {
+        val handler = FunctionHandler()
+        val result = handler.execute(mapOf("hey" to "yo"))
+        result.shouldBe(mapOf("HEY" to "YO"))
+
+        handler.applicationContext.close()
+    }
 })

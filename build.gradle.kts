@@ -26,6 +26,8 @@ dependencies {
     runtimeOnly("ch.qos.logback:logback-classic")
     implementation("io.micronaut:micronaut-validation")
 
+    implementation("io.micronaut.aws:micronaut-function-aws")
+
     implementation("io.micronaut.aws:micronaut-function-aws-custom-runtime")
 
     runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin")
@@ -34,7 +36,7 @@ dependencies {
 
 
 application {
-    mainClass.set("io.micronaut.function.aws.runtime.MicronautLambdaRuntime")
+    mainClass.set("com.codependent.aws.FunctionLambdaRuntime")
 }
 java {
     sourceCompatibility = JavaVersion.toVersion("11")
